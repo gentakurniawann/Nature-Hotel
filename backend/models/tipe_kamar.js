@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class tipe_kamar extends Model {
     /**
@@ -11,31 +9,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.kamar,{
+      this.hasMany(models.kamar, {
         foreignKey: "id_tipe_kamar",
-        as: "tipe_kamar"
-      })
+        as: "tipe_kamar",
+      });
       this.hasMany(models.pemesanan, {
         foreignKey: "id_tipe_kamar",
-        as: "tipe_kamar"
-      })
+        as: "pemesanan tipe_kamar",
+      });
     }
   }
-  tipe_kamar.init({
-    id_tipe_kamar: {
-      type:DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false 
+  tipe_kamar.init(
+    {
+      id_tipe_kamar: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+      },
+      nama_tipe_kamar: DataTypes.STRING,
+      harga: DataTypes.INTEGER,
+      deskripsi: DataTypes.STRING,
+      foto: DataTypes.STRING,
     },
-    nama_tipe_kamar: DataTypes.STRING,
-    harga: DataTypes.INTEGER,
-    deskripsi: DataTypes.STRING,
-    foto: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'tipe_kamar',
-    tableName: 'tipe_kamar'
-  });
+    {
+      sequelize,
+      modelName: "tipe_kamar",
+      tableName: "tipe_kamar",
+    }
+  );
   return tipe_kamar;
 };

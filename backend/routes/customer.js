@@ -94,7 +94,7 @@ app.get("/:id_customer", auth, (req, res) => {
 });
 
 //post data customer
-app.post("/", upload.single("image"), auth, (req, res) => {
+app.post("/", upload.single("foto"), (req, res) => {
   if (!req.file) {
     res.json({
       message: "No uploaded file",
@@ -105,7 +105,7 @@ app.post("/", upload.single("image"), auth, (req, res) => {
       nik: req.body.nik,
       jenis_kelamin: req.body.jenis_kelamin,
       email: req.body.email,
-      password: req.body.password,
+      password: md5(req.body.password),
       foto: req.file.filename,
     };
     customer
@@ -124,7 +124,7 @@ app.post("/", upload.single("image"), auth, (req, res) => {
 });
 
 //update data customer
-app.put("/:id", upload.single("image"), auth, (req, res) => {
+app.put("/:id", upload.single("foto"), auth, (req, res) => {
   let param = { id_customer: req.params.id };
   let data = {
     nama_customer: req.body.nama_customer,
@@ -169,7 +169,7 @@ app.put("/:id", upload.single("image"), auth, (req, res) => {
     });
 });
 
-app.delete("/:id", async (req, res) => { 
+app.delete("/:id", async (req, res) => {
   try {
     let param = { id_customer: req.params.id };
     let result = await customer.findOne({ where: param });

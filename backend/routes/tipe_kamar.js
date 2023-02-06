@@ -63,7 +63,7 @@ app.get("/:id_tipe_kamar", auth, (req, res) => {
 });
 
 //post tipe_kamar
-app.post("/", upload.single("image"), auth, (req, res) => {
+app.post("/", upload.single("foto"), auth, (req, res) => {
   if (!req.file) {
     res.json({
       message: "No uploaded file",
@@ -91,7 +91,7 @@ app.post("/", upload.single("image"), auth, (req, res) => {
 });
 
 //update tipe_kamar
-app.put("/:id", upload.single("image"), auth, (req, res) => {
+app.put("/:id", upload.single("foto"), auth, (req, res) => {
   let param = { id_tipe_kamar: req.params.id };
   let data = {
     nama_tipe_kamar: req.body.nama_tipe_kamar,
@@ -103,7 +103,7 @@ app.put("/:id", upload.single("image"), auth, (req, res) => {
     const row = tipe_kamar
       .findOne({ where: param })
       .then((result) => {
-        let oldFileName = result.image;
+        let oldFileName = result.foto;
 
         // delete old file
         let dir = path.join(__dirname, "../image/tipe_kamar", oldFileName);
@@ -114,7 +114,7 @@ app.put("/:id", upload.single("image"), auth, (req, res) => {
       });
 
     // set new filename
-    data.image = req.file.filename;
+    data.foto = req.file.filename;
   }
   tipe_kamar
     .update(data, { where: param })
@@ -133,9 +133,9 @@ app.put("/:id", upload.single("image"), auth, (req, res) => {
 //delete tipe_kamar
 app.delete("/:id", auth, async (req, res) => {
   try {
-    let param = { product_id: req.params.id };
+    let param = { id_tipe_kamar: req.params.id };
     let result = await tipe_kamar.findOne({ where: param });
-    let oldFileName = result.image;
+    let oldFileName = result.foto;
 
     // delete old file
     let dir = path.join(__dirname, "../image/tipe_kamar", oldFileName);

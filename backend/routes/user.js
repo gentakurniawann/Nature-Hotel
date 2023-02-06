@@ -14,7 +14,7 @@ const fs = require("fs");
 //config storage image
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./image/customer");
+    cb(null, "./image/user");
   },
   filename: (req, file, cb) => {
     cb(null, "img-" + Date.now() + path.extname(file.originalname));
@@ -60,7 +60,7 @@ app.post("/auth", async (req, res) => {
 });
 
 //post user
-app.post("/", upload.single("image"), auth, (req, res) => {
+app.post("/", upload.single("foto"), (req, res) => {
   if (!req.file) {
     res.json({
       message: "No uploaded file",
@@ -122,7 +122,7 @@ app.get("/:id_user", auth, (req, res) => {
 });
 
 //update customer
-app.put("/:id", upload.single("image"), auth, (req, res) => {
+app.put("/:id", upload.single("foto"), auth, (req, res) => {
   let param = { id_user: req.params.id };
   let data = {
     nama_user: req.body.nama_user,
