@@ -6,9 +6,9 @@ export default function SidebarAdmin(props) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  const getNavLinkClass = path => {
+  const getNavLinkClass = (path) => {
     return props.location.pathname === path ? "active" : "";
-  }
+  };
 
   const logout = () => {
     localStorage.clear();
@@ -21,10 +21,14 @@ export default function SidebarAdmin(props) {
       icon: <Media value image="icon-dashboard.svg" alt="icon-dashboard.svg" />,
     },
     {
-      path: "/receptionist",
-      name: "Receptionist",
+      path: "/User",
+      name: "User",
       icon: (
-        <Media value image="icon-receptionist.svg" alt="icon-receptionist.svg" />
+        <Media
+          value
+          image="icon-receptionist.svg"
+          alt="icon-receptionist.svg"
+        />
       ),
     },
     {
@@ -55,7 +59,11 @@ export default function SidebarAdmin(props) {
     <div className="sidebar" style={{ width: isOpen ? "240px" : "80px" }}>
       <div className="sidebar-header d-flex align-items-center justify-content-between">
         <div className="logo" style={{ display: isOpen ? "block" : "none" }}>
-          <Media value image="logo-hotel-white.svg" alt="logo-hotel-white.svg" />
+          <Media
+            value
+            image="logo-hotel-white.svg"
+            alt="logo-hotel-white.svg"
+          />
         </div>
         <div className="bars" onClick={toggle}>
           <Media value image="icon-menu.svg" alt="icon-menu.svg" />
@@ -81,7 +89,15 @@ export default function SidebarAdmin(props) {
         ))}
       </div>
       <div className="sidebar-footer">
-        .logout
+        <div className="logout d-flex align-items-center" onClick={logout}>
+          <Media
+            value
+            image="icon-logout.svg"
+            alt="icon-logout.svg"
+            className="icon"
+          />
+          <p style={{ display: isOpen ? "block" : "none" }}>Logout</p>
+        </div>
       </div>
     </div>
   );

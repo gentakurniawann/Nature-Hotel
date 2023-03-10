@@ -27,11 +27,15 @@ export default class Login extends React.Component {
     axios.post(url, data).then((res) => {
       if (res.data.logged) {
         let nama_user = res.data.data.nama_user;
+        let id_user = res.data.data.id_user;
+        let email = res.data.data.email;
         let foto = res.data.data.foto;
         let user = res.data.data;
         let role = res.data.data.role;
         let token = res.data.token;
         localStorage.setItem("nama_user", nama_user);
+        localStorage.setItem("id_user", id_user);
+        localStorage.setItem("email", email);
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("foto", foto);
         localStorage.setItem("role", role);
@@ -70,11 +74,11 @@ export default class Login extends React.Component {
                 <h1>Login</h1>
                 <div className="form-input">
                   <div className="email">
-                    <label for="username" className="form-label">
+                    <label for="email" className="form-label">
                       Email
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       className="form-control form-control-lg"
                       name="email"
                       placeholder="example@gmail.com"
