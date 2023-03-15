@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Shrikhand&display=swap");
+.container {
+  max-width: 1140px !important;
+}
+.home .banner {
+  /* height: 100vmax; */
+  background: url("../../../public/assets/banner-img.svg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -80px;
+  padding: 202px 0;
+  transition: all 0.3s;
+}
+
+.home .banner h1 {
+  max-width: 694px;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 72px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.home .banner .btn-learnMore {
+  width: 160px;
+  height: 48px;
+  border: 2px solid #73a942;
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.home .banner .btn-learnMore:hover {
+  background-color: #73a942;
+}
+
+.home .about h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.home .about {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.home .about h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #101010;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.home .about p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+}
+
+.home .about .content {
+  max-width: 536px;
+}
+.home .about img {
+  width: 100%;
+}
+
+.home .facilities {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.home .facilities .content {
+  max-width: 510px;
+}
+.home .facilities h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  color: #101010;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.home .facilities p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  margin: 0;
+}
+.home .room {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.home .room .content {
+  background-color: #245501;
+}
+.home .room .room-category {
+  margin-bottom: 24px;
+}
+.home .room h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #aad576;
+  margin: 0;
+}
+.home .room p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.home .testimonial {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.home .testimonial h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.home .testimonial p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  color: #101010;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.home .special-offer {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.home .special-offer h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 32px;
+}
+.home .special-offer h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #101010;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.home .special-offer p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(16, 16, 16, 0.65);
+  margin: 0;
+  margin-bottom: 24px;
+  height: 72px;
+}
+
+.home .special-offer a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #73a942;
+  margin: 0;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1500px) {
+  .home .room .content {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .home .room .content img {
+    width: 600px;
+    height: 720px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home .room .content img {
+    width: 360px;
+    height: 560px;
+  }
+  .home .room h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #aad576;
+    margin: 0;
+  }
+  .home .room p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .home .banner h1 {
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  .home .room .content {
+    padding: 32px 0;
+  }
+  .home .room .content img {
+    display: none;
+  }
+  .home .room h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #aad576;
+    margin: 0;
+  }
+  .home .room p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    margin: 0;
+  }
+}

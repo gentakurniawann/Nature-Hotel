@@ -1,0 +1,120 @@
+.profile-page {
+  padding-top: 56px;
+  padding-bottom: 100px;
+}
+.profile-page .profile-card {
+  background-color: #ffffff;
+  padding: 24px 32px 74px 32px;
+  box-shadow: 1px 1px 10px 4px rgba(217, 217, 217, 0.65);
+  border-radius: 24px;
+}
+
+.profile-page .profile-card .d-flex {
+  gap: 24px;
+}
+.profile-page .form-profile {
+  min-width: 240px;
+  width: 617px;
+}
+.profile-page .profile-card input {
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  height: 48px;
+  margin-bottom: 8px;
+}
+.profile-page .profile-card select {
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.profile-page label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(16, 16, 16, 0.65);
+  margin: 0;
+}
+.profile-page .profile-card h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #1a4301;
+  margin: 0;
+}
+.profile-page img {
+  border-radius: 50%;
+}
+.profile-page .btn-saveProfile {
+  margin-top: 24px;
+  background-color: #73a942;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+}
+.profile-page .btn-saveProfile:hover {
+  border: 2px solid #73a942;
+  color: #73a942;
+}
+.profile-page .btn-logout {
+  margin-top: 16px;
+  background-color: #ff4545;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+}
+.profile-page .btn-logout:hover {
+  border: 2px solid #ff4545;
+  color: #ff4545;
+}
+
+@media only screen and (max-width: 993px) {
+  .profile-page .profile-card .d-flex {
+    flex-direction: column;
+  }
+  .profile-page .form-profile {
+    width: 240px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .profile-page .container {
+    padding: 0px 18px 0px 98px;
+  }
+  .profile-page .profile-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .profile-page .content-header h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

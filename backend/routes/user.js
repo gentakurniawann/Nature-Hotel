@@ -25,6 +25,22 @@ let upload = multer({ storage: storage });
 const models = require("../models/index");
 const user = models.user;
 
+// get user by role
+app.get("/find/:role", (req, res) => {
+  user
+    .findOne({ where: { role: req.params.role } })
+    .then((result) => {
+      res.json({
+        user: result,
+      });
+    })
+    .catch((error) => {
+      res.json({
+        message: error.message,
+      });
+    });
+});
+
 //import auth
 const auth = require("../auth");
 const jwt = require("jsonwebtoken");
@@ -105,7 +121,6 @@ app.get("/", auth, (req, res) => {
     });
 });
 
-//get user by id
 app.get("/:id_user", auth, (req, res) => {
   user
     .findOne({ where: { id_user: req.params.id_user } })

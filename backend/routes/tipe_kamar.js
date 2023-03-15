@@ -25,12 +25,8 @@ const storage = multer.diskStorage({
 });
 let upload = multer({ storage: storage });
 
-//import auth
-const auth = require("../auth");
-app.use(auth);
-
 // get tipe_kamar
-app.get("/", auth, (req, res) => {
+app.get("/", (req, res) => {
   tipe_kamar
     .findAll()
     .then((tipe_kamar) => {
@@ -47,7 +43,7 @@ app.get("/", auth, (req, res) => {
 });
 
 //get tipe_kamar by id
-app.get("/:id_tipe_kamar", auth, (req, res) => {
+app.get("/:id_tipe_kamar", (req, res) => {
   tipe_kamar
     .findOne({ where: { id_tipe_kamar: req.params.id_tipe_kamar } })
     .then((result) => {
@@ -61,6 +57,9 @@ app.get("/:id_tipe_kamar", auth, (req, res) => {
       });
     });
 });
+
+const auth = require("../auth");
+app.use(auth);
 
 //post tipe_kamar
 app.post("/", upload.single("foto"), auth, (req, res) => {

@@ -16,7 +16,7 @@ app.use(auth);
 // get all data kamar
 app.get("/", auth, (req, res) => {
   kamar
-    .findAll()
+    .findAll({ include: "tipe_kamar" })
     .then((result) => {
       res.json({
         count: result.length,
@@ -33,7 +33,10 @@ app.get("/", auth, (req, res) => {
 //get kamar by id
 app.get("/:id_kamar", auth, (req, res) => {
   kamar
-    .findOne({ where: { id_kamar: req.params.id_kamar } })
+    .findOne({
+      where: { id_kamar: req.params.id_kamar },
+      include: "tipe_kamar",
+    })
     .then((result) => {
       res.json({
         kamar: result,
@@ -103,7 +106,7 @@ app.delete("/:id", auth, async (req, res) => {
     })
     .catch((error) => {
       res.json({
-        message: "error.message",
+        message: error.message,
       });
     });
 });

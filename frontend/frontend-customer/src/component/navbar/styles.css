@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Shrikhand&display=swap");
+.navbar {
+  background-color: transparent;
+}
+.navbar-colored {
+  background-color: #245501;
+  position: sticky !important;
+  top: 0;
+}
+.navbar-colored .container {
+  max-width: 1140px !important;
+}
+.navbar .container {
+  max-width: 1140px !important;
+}
+
+.navbar .navbar-brand {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+
+  color: #ffffff;
+}
+
+.navbar .nav-link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.navbar .nav-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+.navbar .btn-login {
+  width: 140px;
+  height: 40px;
+  background-color: #73a942;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-left: 52px;
+  border-radius: 8px;
+}
+
+.navbar .btn-login:hover {
+  border: 3px solid #73a942;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .navbar {
+    background-color: #245501;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .btn-login {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .navbar-colored .btn-login {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  .navbar .profile {
+    margin-left: 0 !important;
+    margin-top: 24px;
+  }
+  .navbar-colored .profile {
+    margin-left: 0 !important;
+    margin-top: 24px;
+  }
+}

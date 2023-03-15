@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shrikhand&display=swap");
+
+.gallery-page {
+  padding-top: 56px;
+  padding-bottom: 100px;
+}
+.gallery-page .container {
+  max-width: 1140px;
+}
+.gallery-page h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 32px;
+}
+.gallery-page .row {
+  margin-bottom: 40px;
+  row-gap: 40px;
+}

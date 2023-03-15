@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shrikhand&display=swap");
+
+.booking-page {
+  padding-top: 56px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+.booking-page .container {
+  max-width: 1140px;
+}
+.booking-page h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 32px;
+}
+.booking-page .card {
+  margin-top: 12px;
+  border-radius: 16px;
+  border: 0 #ffffff;
+  box-shadow: 1px 1px 10px 4px rgba(217, 217, 217, 0.65);
+  position: static;
+}
+.booking-page p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(16, 16, 16, 0.65);
+  margin: 0;
+  margin-bottom: 8px;
+}
+.booking-page .table {
+  border-collapse: separate;
+}
+.booking-page thead {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.booking-page tbody {
+  color: #000000;
+  text-align: left;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.modal-footer .btn-print {
+  color: #ffffff;
+  background-color: #73a942;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  height: 40px;
+}
+.modal-footer .btn-print:hover {
+  color: #ffffff;
+  background-color: #73a942;
+  box-shadow: 2px 4px 10px rgba(115, 169, 66, 0.65);
+}
+
+.modal-header .modalTitle {
+  color: #1a4301;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.modal-body p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #101010;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.booking-page .btn-detail {
+  background-color: #73a942;
+  color: #ffffff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  height: 40px;
+  min-width: 100px;
+}
+.booking-page .btn-detail:hover {
+  background-color: #73a942;
+  color: #ffffff;
+  box-shadow: 2px 4px 10px rgba(115, 169, 66, 0.65);
+}

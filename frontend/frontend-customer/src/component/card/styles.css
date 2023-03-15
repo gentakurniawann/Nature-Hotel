@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shrikhand&display=swap");
+.card-room {
+  border-radius: 16px;
+  box-shadow: 2px 4px 10px rgba(217, 217, 217, 0.65);
+}
+.card-room .card-body {
+  padding: 16px;
+  background-color: #fafff6;
+}
+.card-room h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #101010;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.card-room p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a4301;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.card-room .btn-viewDetail {
+  height: 48px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  background-color: #73a942;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.card-room .btn-viewDetail:hover {
+  height: 48px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  background-color: #73a942;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
